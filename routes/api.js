@@ -5,9 +5,15 @@ module.exports = function (express) {  //returns router
 		res.json({ hello: "world"});
 	});
 
-		router.get('/status', function(req, res){
+	router.get('/status', function(req, res){
 		res.json({ healthy: true});
 	});
+
+	router.get('/user/:id', function(req, res){
+		res.json({ user: { id: req.params.id }});
+	});
+
+
 
 	return router;
 }
