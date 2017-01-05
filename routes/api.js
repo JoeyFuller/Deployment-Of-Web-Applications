@@ -15,7 +15,7 @@ module.exports = function (express) {  //returns router
 
 	// shortner routes
 
-	router.post('/api/shorten', function(req, res){
+	router.post('/api/v1/url', function(req, res){
 		//create and return shortURL
 	});
 
