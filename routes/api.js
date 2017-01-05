@@ -13,6 +13,15 @@ module.exports = function (express) {  //returns router
 		res.json({ user: { id: req.params.id }});
 	});
 
+	// shortner routes
+
+	router.post('/api/shorten', function(req, res){
+		//create and return shortURL
+	});
+
+	router.get('/:encoded_id', function(req, res){
+
+	});
 
 
 	return router;
