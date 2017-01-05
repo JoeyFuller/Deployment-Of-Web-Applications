@@ -26,3 +26,6 @@ module.exports = function (express) {  //returns router
 
 	return router;
 }
+
+//module.exports.encode = encode;
+//module.exports.decode = decode;

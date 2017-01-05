@@ -12,7 +12,7 @@ describe('API', function(){
 		server.close();
 	});
 
-	it('Should return specified object', function testHealth(done){
+	it('Should return specified object', function testHealth(done){ 
 		request(server)
 			.get('/api/')
 			.set('Accept', 'application/json')
