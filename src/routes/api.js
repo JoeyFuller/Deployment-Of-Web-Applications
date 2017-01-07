@@ -1,16 +1,14 @@
 module.exports = function (express) {  //uses router
 	const router = express.Router();
 
+	/*Home Page*/
 	router.get('/', function(req, res){
 		res.json({ Hello: 'The URL shortner API by Joey Fuller'});
 	});
 
-	// shortner routes
 
-	router.post('/api/v1/url', function(req, res){
-		//create and return shortURL
-	});
-
+	/*Endpoint*/
+	router.get('/api/v1', require('/API/smallURL.js')(express));
 
 
 	return router;
