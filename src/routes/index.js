@@ -8,7 +8,7 @@ module.exports = function (express) {  //uses router
 
 
 	/*Endpoint*/
-	router.use('/api', require('./api/smallURL.js')(express));
+	router.use('/api/v1', require('./api/urls.js')(express));
 
 
 	return router;
