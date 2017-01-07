@@ -2,7 +2,7 @@ module.exports = function (express) {  //returns router
 	var router = express.Router();
 
 	router.get('/', function(req, res){
-		res.json({ hello: "world"});
+		res.json({ hello: "HI JESS :D"});
 	});
 
 	router.get('/status', function(req, res){
