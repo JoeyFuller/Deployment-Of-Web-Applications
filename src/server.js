@@ -1,3 +1,5 @@
+/*Joey Fuller*/
+
 /*Dependencies*/
 const express = require('express');
 const body_parser = require('body-parser');
@@ -8,12 +10,14 @@ const app = express();
 /*Body Parser*/
 app.use(body_parser.json());
 
-
+/*Express to Routes*/
 app.use('/', require('../src/routes/api.js')(express));
 
-const port = 3000; //port server is running on
+/*Port to listen on*/
+const port = 3000;
 const server = app.listen(port, function(){
 	console.log('Server active on', port, 'until I break it again..'); //console log to show server active
 });
 
-module.exports = server; //exporting the server
+/*Export Server*/
+module.exports = server;
