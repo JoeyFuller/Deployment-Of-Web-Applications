@@ -1,4 +1,4 @@
-/*Joey Fuller*/
+/*Joey Fuller v1.0.0*/ 
 /*Exports Express*/
 module.exports = (express) => {
 

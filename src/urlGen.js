@@ -1,4 +1,4 @@
-/*Joey Fuller*/
+/*Joey Fuller v1.0.0*/ 
 /*Rangen function*/
 function urlGen(){
 	/*Base for random URL*/
