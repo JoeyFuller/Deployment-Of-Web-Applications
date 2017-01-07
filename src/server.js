@@ -5,7 +5,8 @@ const body_parser = require('body-parser');
 /*Express*/
 const app = express();
 
-
+/*Body Parser*/
+app.use(body-parserr.json());
 
 
 app.use('/', require('../src/routes/api.js')(express));
