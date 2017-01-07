@@ -11,7 +11,7 @@ const app = express();
 app.use(body_parser.json());
 
 /*Express to Routes*/
-app.use('/', require('../src/routes/api.js')(express));
+app.use('/', require('../src/routes/index.js')(express));
 
 /*Port to listen on*/
 const port = 3000;
