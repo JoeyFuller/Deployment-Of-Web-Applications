@@ -1,5 +1,9 @@
 /*Joey Fuller v1.0.0*/ 
 /*Home Page*/
+
+/*Depends*/
+const url =require('../models/url');
+
 /*Use Router*/
 module.exports = function (express) {
 	/*Uses Router*/  
@@ -13,7 +17,7 @@ module.exports = function (express) {
 	/*URL ReDirect*/
 
 	router.get((req,res) {
-		
+
 	}
 
 
