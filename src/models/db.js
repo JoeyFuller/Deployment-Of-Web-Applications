@@ -18,7 +18,7 @@ const sequelize = new Sequelize(process.env.DBNAME, process.env.DBUSER, process.
 });
 
 /*Table Create*/
-const url-model = sequelize.defind('url-model', {
+const url = sequelize.defind('url', {
 	longURL:{
 		type: Sequelize.STRING,
 	},
@@ -31,4 +31,4 @@ sequelize.sync();
 
 /*Exports*/
 exports.sequelize = sequelize;
-exports.url-model = url-model;
+exports.url = url;

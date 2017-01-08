@@ -2,25 +2,25 @@
 /*Home Page*/
 
 /*Depends*/
-const url =require('../models/url-model');
+const url =require('../models/url');
 
 /*Use Router*/
-module.exports = function(express) {
+module.exports = (express) => {
 	/*Uses Router*/  
 	const router = express.Router();
 
 	/*Home Page GET*/
-	router.get('/', function(req, res){
+	router.get('/', (req, res) => {
 		res.json({ Hello: 'The URL shortner API by Joey Fuller'});
 	});
 
 	/*URL ReDirect*/
 
-	router.get('/go/:shortURL', (req,res) {
+	router.get('/go/:shortURL', (req,res) => {
 		req.body.shortURL = req.params.shortURL;
-		url.findShortURL(req.body, (err){
-			res.status().json(err);
-		}, (data){
+		url.findShortURL(req.body, (err) => {
+			res.status(500).json(err);
+		}, (data) => {
 			res.redirect('https://www.' + data.longURL);
 		})
 
