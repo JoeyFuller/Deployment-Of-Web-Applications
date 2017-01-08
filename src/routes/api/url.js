@@ -1,4 +1,8 @@
-/*Joey Fuller v1.0.0*/ 
+/*Joey Fuller v1.0.0*/
+
+/*Depends*/
+const url = require('../models/url-model');
+ 
 /*Exports Express*/
 module.exports = (express) => {
 

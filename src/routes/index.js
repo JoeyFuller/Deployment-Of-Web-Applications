@@ -2,10 +2,10 @@
 /*Home Page*/
 
 /*Depends*/
-const url =require('../models/url');
+const url =require('../models/url-model');
 
 /*Use Router*/
-module.exports = function (express) {
+module.exports = function(express) {
 	/*Uses Router*/  
 	const router = express.Router();
 
@@ -16,9 +16,15 @@ module.exports = function (express) {
 
 	/*URL ReDirect*/
 
-	router.get((req,res) {
+	router.get('/go/:shortURL', (req,res) {
+		req.body.shortURL = req.params.shortURL;
+		url.findShortURL(req.body, (err){
+			res.status().json(err);
+		}, (data){
+			res.redirect('https://www.' + data.longURL);
+		})
 
-	}
+	});
 
 
 	/*API USE*/
