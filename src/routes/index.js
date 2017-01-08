@@ -10,6 +10,12 @@ module.exports = function (express) {
 		res.json({ Hello: 'The URL shortner API by Joey Fuller'});
 	});
 
+	/*URL ReDirect*/
+
+	router.get((req,res) {
+		
+	}
+
 
 	/*API USE*/
 	router.use('/api/v1', require('./api/url.js')(express));
