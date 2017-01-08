@@ -7,7 +7,7 @@ require('dotenv').config();
 /*Sequelize to DB*/
 const sequelize = new Sequelize(process.env.DBNAME, process.env.DBUSER, process.env.DBPASS, {
 	host:process.env.DBHOST,
-	dialect:process.env.DBSCHEMA
+	dialect:process.env.DBSCHEMA,
 	port:process.env.DBPORT,
 	pool: {
 		max: 4,

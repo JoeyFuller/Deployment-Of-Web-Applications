@@ -41,7 +41,7 @@ exports.findShortURL =(payload, err, success) => {
 exports.update = (payload, err, sucess) => {
 	db.url.find({
 		where: {
-			id.payload.id,
+			id:payload.id,
 		}
 	}).then((existingData) => {
 		existingData.updateAttributes(payload).then(success).catch(err);

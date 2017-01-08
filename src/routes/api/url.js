@@ -15,6 +15,7 @@ module.exports = (express) => {
 		req.body.short_url = urlGen.urlGen();
 		url.create(req.body, (err) => {
 			res.status(500).json(err);
+			console.log('CREATE ERROR', err);
 		}, (data) => {
 			res.status(200).json(err);
 		});
