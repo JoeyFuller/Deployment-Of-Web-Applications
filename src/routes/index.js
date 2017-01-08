@@ -11,7 +11,7 @@ module.exports = function (express) {
 	});
 
 
-	/*Endpoint USE*/
+	/*API USE*/
 	router.use('/api/v1', require('./api/url.js')(express));
 
 	/*Returns router*/

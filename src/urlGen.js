@@ -7,8 +7,8 @@ function urlGen(){
 	var urlGen_text_length = 4;
 	var urlGen_text = '';
 
-	for(var i = 0; i < urlGen_text_length; i+=) {
-		urlGen_text += base.charAt((Math.random())*base.length);
+	for(var i = 0; i < urlGen_text_length; i++) {
+		urlGen_text += base.charAt((Math.random()) * base.length);
 	};
 	/*Return function results to export*/
 	return urlGen_text;
