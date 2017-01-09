@@ -1,18 +1,18 @@
 /*Joey Fuller v1.0.0*/ 
 /*Rangen function*/
-function urlgen(){
+function urlGen(){
 	/*Base for random URL*/
-	const base = 'abcdefghjkmnpqrstuvwxyzABCDEFGHJKMNPQRSTUVWXY23456789';
+	var base = 'abcdefghjkmnpqrstuvwxyzABCDEFGHJKMNPQRSTUVWXY23456789';
 	/*Makes ranGen URl text = 5 characters*/
-	var urlgen_text_length = 5;
-	var urlgen_text = '';
+	var urlGen_text_length = 5;
+	var urlGen_text = '';
 
-	for(var i = 0; i < urlgen_text_length; i++) {
-		urlgen_text += base.charAt((Math.random()) * base.length);
+	for(var i = 0; i < urlGen_text_length; i++) {
+		urlGen_text += base.charAt((Math.random()) * base.length);
 	};
 	/*Return function results to export*/
-	return urlgen_text;
+	return urlGen_text;
 }
 
 /*Export function results*/
-exports.urlgen = urlgen;
+exports.urlGen = urlGen;

@@ -11,11 +11,10 @@ module.exports = (express) => {
 
 	/*Makes SHORT url Crud*/
 	router.post('/urls', (req, res) => {
-		var urlgen = require('../../lib/urlgen');
-		req.body.short_url = urlgen.urlgen();
+		var urlGen = require('../../lib/urlGen');
+		req.body.shortURL = urlGen.urlGen();
 		url.create(req.body, (err) => {
 			res.status(500).json(err);
-			console.log('CREATE ERROR', err);
 		}, (data) => {
 			res.status(200).json(err);
 		});
@@ -43,7 +42,7 @@ module.exports = (express) => {
 	/*Update URLS crUd*/
 	router.post('/urls/:id', (req, res) => {
 		req.body.id = req.params.id;
-		url.update(req,body, (err) => {
+		url.update(req.body, (err) => {
 			res.status(500).json(err);
 		}, (data) => {
 			res.status(200).json(data);
