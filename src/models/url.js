@@ -50,7 +50,7 @@ exports.update = (payload, err, sucess) => {
 
 /*Delete cruD*/
 exports.delete = (payload, err, success) => {
-	db.url.delete({
+	db.url.destroy({
 		where: {
 			id: payload.id,
 		}

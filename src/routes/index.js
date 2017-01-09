@@ -2,7 +2,7 @@
 /*Home Page*/
 
 /*Depends*/
-const url =require('../models/url');
+const url = require('../models/url');
 
 /*Use Router*/
 module.exports = (express) => {
@@ -21,7 +21,7 @@ module.exports = (express) => {
 		url.findShortURL(req.body, (err) => {
 			res.status(500).json(err);
 		}, (data) => {
-			res.redirect('https://www.' + data.longURL);
+			res.redirect("http://www."+data.longURL);
 		})
 
 	});

@@ -11,8 +11,8 @@ module.exports = (express) => {
 
 	/*Makes SHORT url Crud*/
 	router.post('/urls', (req, res) => {
-		var urlGen = require('../src/urlGen');
-		req.body.short_url = urlGen.urlGen();
+		var urlgen = require('../../lib/urlgen');
+		req.body.short_url = urlgen.urlgen();
 		url.create(req.body, (err) => {
 			res.status(500).json(err);
 			console.log('CREATE ERROR', err);
@@ -32,7 +32,8 @@ module.exports = (express) => {
 
 	/*Read Id*/
 	router.get('/urls/:id', (req, res) => {
-		url.findAll((err) => {
+		req.body.id = req.params.id;
+		url.findID(req.body, (err) => {
 			res.status(500).json(err);
 		}, (data) => {
 			res.status(200).json(data);
@@ -40,7 +41,7 @@ module.exports = (express) => {
 	});
 
 	/*Update URLS crUd*/
-	router.post('/urls/:id', req, res) => {
+	router.post('/urls/:id', (req, res) => {
 		req.body.id = req.params.id;
 		url.update(req,body, (err) => {
 			res.status(500).json(err);
@@ -51,7 +52,7 @@ module.exports = (express) => {
 
 	/*Delete URLS cruD*/
 	router.delete('/urls/:id', (req, res) => {
-		req.body = req.params.id;
+		req.body.id = req.params.id;
 		url.destroy(req.body, (err) => {
 			res.status(500).json(err);
 		}, (data) => {

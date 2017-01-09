@@ -3,6 +3,8 @@
 const express = require('express');
 const body_parser = require('body-parser');
 
+require("dotenv").config();
+
 /*Express*/
 const app = express();
 
@@ -15,7 +17,7 @@ app.use('/', require('../src/routes/index.js')(express));
 
 /*Port to listen on*/
 const port = process.env.PORT || 3000;
-const server = app.listen(port, function() {
+const server = app.listen(port, () => {
 	console.log('Server active on', port, 'until I break it again..'); //console log to show server active
 });
 
